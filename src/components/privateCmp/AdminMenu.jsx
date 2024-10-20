@@ -4,6 +4,7 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { useNavigate } from "react-router-dom";
 import { removeToken } from '../../authentication/authUtility';
+import { Link } from 'react-router-dom';
 
 const AdminMenu = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const AdminMenu = () => {
 
       <nav className="navbar navbar-expand-sm bg-primary p-0">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/admin/adminDashBoard"  style={{ width: '220px' }}> <b>SK Tech-Hub</b></a>
+        <Link className="navbar-brand"  to="/admin/adminDashBoard"  style={{ width: '220px' }}> <b>SK Tech-Hub</b></Link> 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -25,7 +26,7 @@ const AdminMenu = () => {
                   Configuration
                 </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="/admin/addShop">Add Shop</a></li>
+                  <li> <Link className="dropdown-item"  to="/admin/addShop">Add Shop</Link>  </li>
                   <li><a className="dropdown-item" href="#">Another action</a></li>
                 </ul>
               </li>
