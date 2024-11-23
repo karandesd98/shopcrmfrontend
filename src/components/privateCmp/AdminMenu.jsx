@@ -27,7 +27,7 @@ const AdminMenu = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li> <Link className="dropdown-item"  to="/admin/addShop">Add Shop</Link>  </li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
+                  <li> <Link className="dropdown-item"  to="/admin/addProduct">Add Products</Link>  </li>
                 </ul>
               </li>
 

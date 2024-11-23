@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useParams } from "react";
 import axios from 'axios';
-import basUrl from "../API/bootApi";
+import apiClient from "../API/bootApi";
 import { saveTokenToLocalStorage } from "../authentication/authUtility";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const LoginCmp = () => {
     };
 
     const loginCheck = (e) => {
-        const responseData = axios.post(`${basUrl}/auth/login`, formData).then((respnse) => respnse.data);
+        const responseData = apiClient.post(`/auth/login`, formData).then((respnse) => respnse.data);
 
         responseData.then((jwtTokenData) => {
             if (jwtTokenData == 'Credentials Invalid !!') {
